@@ -9,42 +9,46 @@
 <body>
     <h1>10-Year AFib Risk Predictor</h1>
     <form id="risk-form">
-        <label for="age">Age (45-90):</label>
-        <input type="number" id="age" name="age" min="45" max="90" required>
-        
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender" required>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-        </select>
-        
-        <label for="bmi">Body Mass Index (BMI):</label>
-        <input type="number" id="bmi" name="bmi" step="0.1" required>
-        
-        <label for="blood-pressure">Systolic Blood Pressure (90-200):</label>
-        <input type="number" id="blood-pressure" name="blood-pressure" min="90" max="200" required>
-        
-        <label for="hypertension-medications">Use of Hypertension Medications:</label>
-        <select id="hypertension-medications" name="hypertension-medications" required>
-            <option value="no">No</option>
-            <option value="yes">Yes</option>
-        </select>
-        
-        <label for="pr-interval">PR Interval (&lt;160 to &gt;/200):</label>
-        <input type="number" id="pr-interval" name="pr-interval" required>
-        
-        <label for="murmur">Significant Murmur:</label>
-        <select id="murmur" name="murmur" required>
-            <option value="no">No</option>
-            <option value="yes">Yes</option>
-        </select>
-        
-        <label for="heart-failure">Prevalent Heart Failure:</label>
-        <select id="heart-failure" name="heart-failure" required>
-            <option value="no">No</option>
-            <option value="yes">Yes</option>
-        </select>
-        
+        <div class="form-row">
+            <div class="form-column">
+                <label for="age">Age (45-90):</label>
+                <input type="number" id="age" name="age" min="45" max="90" required>
+                
+                <label for="bmi">Body Mass Index (BMI):</label>
+                <input type="number" id="bmi" name="bmi" step="0.1" required>
+                
+                <label for="blood-pressure">Systolic Blood Pressure (90-200):</label>
+                <input type="number" id="blood-pressure" name="blood-pressure" min="90" max="200" required>
+                
+                <label for="pr-interval">PR Interval (&lt;160 to &gt;/200):</label>
+                <input type="number" id="pr-interval" name="pr-interval" required>
+            </div>
+            <div class="form-column">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                
+                <label for="hypertension-medications">Use of Hypertension Medications:</label>
+                <select id="hypertension-medications" name="hypertension-medications" required>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+                
+                <label for="murmur">Significant Murmur:</label>
+                <select id="murmur" name="murmur" required>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+                
+                <label for="heart-failure">Prevalent Heart Failure:</label>
+                <select id="heart-failure" name="heart-failure" required>
+                    <option value="no">No</option>
+                    <option value="yes">Yes</option>
+                </select>
+            </div>
+        </div>
         <button type="submit">Calculate Risk</button>
     </form>
     <div id="result"></div>
